@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
 
   def create
     user = find_user || create_user
-    user.update(token: github_token)
     create_session_for(user)
     redirect_to repos_path
   end
