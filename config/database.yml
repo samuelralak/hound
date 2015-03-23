@@ -2,7 +2,8 @@ development: &default
   adapter: postgresql
   encoding: unicode
   database: hound_development
-  pool: 5
+  host: localhost
+  pool: 20
 
 test:
   <<: *default
